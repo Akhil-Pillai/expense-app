@@ -7,8 +7,28 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"> 
         <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
         <script src="main.js"></script>
+        
     </head>
     <body>
+        <button id="btnCounter"></button>
 
     </body>
+    <script>        
+        //Take a number which starts from zero
+        let counter=0;
+
+        //Every click incree=ments a number
+        function counterIncrement() {
+            counter = counter+1;
+            console.log(counter);
+        }
+        //get button element
+        const element = document.querySelector("#btnCounter");
+        
+
+        //listen to click event
+        element.addEventListener("click", counterIncrement, false);
+        
+        
+    </script>
 </html>
