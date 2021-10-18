@@ -10,24 +10,40 @@
         
     </head>
     <body>
-        <button id="btnCounter"></button>
+        <input id="inputAmount" type="text"></input>
+        <button id="btnAddExpense"></button>
 
     </body>
-    <script>        
-        //Take a number which starts from zero
-        let counter=0;
+    <script>      
+        //init value of expense at 0
+        let totalExpense = 0;
+       
 
-        //Every click incree=ments a number
-        function counterIncrement() {
-            counter = counter+1;
-            console.log(counter);
+        //onButtonClick add inputAmount to totalExpense
+
+        function addExpenseToToal(){
+            //read value from input amount
+            const inputElement = document.querySelector("#inputAmount");
+            const textAmount = inputElement.value;
+            
+
+            //convert to number 
+            const expense = parseInt(textAmount, 10);
+            
+
+            //add value to total expense
+            totalExpense = totalExpense + expense;
+            console.log(( totalExpense ));
         }
+
+        
+
         //get button element
-        const element = document.querySelector("#btnCounter");
+        const element = document.querySelector("#btnAddExpense");
         
 
         //listen to click event
-        element.addEventListener("click", counterIncrement, false);
+        element.addEventListener("click", addExpenseToToal, false);
         
         
     </script>
