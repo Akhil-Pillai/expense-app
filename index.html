@@ -10,21 +10,35 @@
         
     </head>
     <body>
-        <input id="inputAmount" type="text"></input>
+        <input id="inputAmount" type="text">
+        <input id="inputDesc" type="text">
         <button id="btnAddExpense"></button>
 
     </body>
     <script>      
+      //get heading element
+        const headingEl = document.querySelector("#headingTotal");
+        
+        //get the reference to description element
+        const inputDescEl = document.querySelector("#inputDesc");
+        
+        //ref to input amount
+        const inputElement = document.querySelector("#inputAmount");
+        
         //init value of expense at 0
         let totalExpense = 0;
        
+       //set heading to Total Expense
+       headingEl.textContent = totalExpense;
 
         //onButtonClick add inputAmount to totalExpense
 
         function addExpenseToToal(){
-            //read value from input amount
-            const inputElement = document.querySelector("#inputAmount");
+           //read value from input amount
             const textAmount = inputElement.value;
+            
+            //read the desc from inputDesc
+            const textDesc = inputDescEl.value;
             
 
             //convert to number 
@@ -33,9 +47,9 @@
 
             //add value to total expense
             totalExpense = totalExpense + expense;
-            console.log(( totalExpense ));
+            
+            //set heading element to total expense
         }
-
         
 
         //get button element
