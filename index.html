@@ -37,6 +37,8 @@
         //onButtonClick add inputAmount to totalExpense
 
         function addExpenseToToal(){
+            const expenseItem={};
+        
            //read value from input amount
             const textAmount = inputElement.value;
             
@@ -46,6 +48,11 @@
 
             //convert to number 
             const expense = parseInt(textAmount, 10);
+            
+            //put it in object
+            expenseItem.desc = textDesc;
+            expenseItem.amount = expense
+            console.log(expenseItem)
             
 
             //add value to total expense
