@@ -13,6 +13,7 @@
         <input id="inputAmount" type="text">
         <input id="inputDesc" type="text">
         <button id="btnAddExpense"></button>
+        <input id="total" type="text">
 
     </body>
     <script>      
@@ -24,6 +25,9 @@
         
         //ref to input amount
         const inputElement = document.querySelector("#inputAmount");
+        
+        //ref total id
+        const inputTotal = document.querySelector("#total");
         
         //init value of expense at 0
         let totalExpense = 0;
